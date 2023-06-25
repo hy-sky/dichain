@@ -34923,6 +34923,47 @@ paths:
           format: int64
       tags:
         - Query
+  /dichain/swap/params:
+    get:
+      summary: Parameters queries the parameters of the module.
+      operationId: DichainSwapParams
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              params:
+                description: params holds all the parameters of this module.
+                type: object
+                properties:
+                  admin:
+                    type: string
+                  commissionRate:
+                    type: string
+            description: >-
+              QueryParamsResponse is response type for the Query/Params RPC
+              method.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
+                      type: string
+                  additionalProperties: {}
+      tags:
+        - Query
   /ibc/apps/interchain_accounts/controller/v1/owners/{owner}/connections/{connection_id}:
     get:
       summary: >-
@@ -70531,6 +70572,34 @@ definitions:
             NOTE: The amount field is an Int which implements the custom method
             signatures required by gogoproto.
     description: Period defines a length of time and amount of coins that will vest.
+  dichain.swap.MsgAddLiquidityResponse:
+    type: object
+  dichain.swap.MsgDistributeCoinsResponse:
+    type: object
+  dichain.swap.MsgMintCoinsResponse:
+    type: object
+  dichain.swap.MsgSwapCoinResponse:
+    type: object
+  dichain.swap.Params:
+    type: object
+    properties:
+      admin:
+        type: string
+      commissionRate:
+        type: string
+    description: Params defines the parameters for the module.
+  dichain.swap.QueryParamsResponse:
+    type: object
+    properties:
+      params:
+        description: params holds all the parameters of this module.
+        type: object
+        properties:
+          admin:
+            type: string
+          commissionRate:
+            type: string
+    description: QueryParamsResponse is response type for the Query/Params RPC method.
   ibc.applications.interchain_accounts.controller.v1.MsgRegisterInterchainAccountResponse:
     type: object
     properties:

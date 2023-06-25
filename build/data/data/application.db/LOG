@@ -1,0 +1,24 @@
+=============== Jun 25, 2023 (CST) ===============
+16:22:24.445564 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+16:22:24.454683 db@open opening
+16:22:24.454977 version@stat F·[] S·0B[] Sc·[]
+16:22:24.460736 db@janitor F·2 G·0
+16:22:24.460752 db@open done T·6.052417ms
+16:27:52.222949 memdb@flush N·40614 S·3MiB
+16:27:52.248930 memdb@flush created L0@3 N·40614 S·2MiB "s/1,v349":"s/latest,v350"
+16:27:52.248966 version@stat F·[1] S·2MiB[2MiB] Sc·[0.25]
+16:27:52.252821 memdb@flush committed F·1 T·29.838417ms
+16:27:52.253404 journal@remove removed @1
+16:33:07.009242 memdb@flush N·40302 S·3MiB
+16:33:07.034176 memdb@flush created L0@5 N·40302 S·2MiB "s/322,v40615":"s/latest,v40616"
+16:33:07.034204 version@stat F·[2] S·4MiB[4MiB] Sc·[0.50]
+16:33:07.035456 memdb@flush committed F·1 T·26.154874ms
+16:33:07.035785 journal@remove removed @2
+16:33:14.137519 table@compaction L0·2 -> L1·0 S·4MiB Q·81807
+16:33:14.173953 table@build created L1@6 N·36864 S·2MiB "s/1,v349":"s/k..184,v22598"
+16:33:14.192900 table@build created L1@7 N·23253 S·2MiB "s/k..185,v22728":"s/k..\x00\x00L,v8991"
+16:33:14.196958 table@build created L1@8 N·1254 S·14KiB "s/k..\x00\x00M,v9107":"s/latest,v80834"
+16:33:14.196988 version@stat F·[0 3] S·4MiB[0B 4MiB] Sc·[0.00 0.04]
+16:33:14.199941 table@compaction committed F+1 S-171KiB Ke·0 D·19545 T·62.396833ms
+16:33:14.200078 table@remove removed @5
+16:33:14.200234 table@remove removed @3

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package dichain.swap;
+
+import "gogoproto/gogo.proto";
+import "dichain/swap/params.proto";
+
+option go_package = "dichain/x/swap/types";
+
+// GenesisState defines the swap module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}

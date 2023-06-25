@@ -1,21 +1,56 @@
 version: 1
 accounts:
-- name: alice
+  - name: admin
+    coins:
+      - 81000000bbt
+    mnemonic: october pride genuine harvest reunion sight become tuna kingdom punch
+      girl lizard cat crater fee emotion seat test output safe volume caught design
+      soft
+  - name: alice
+    coins:
+      - 50000000bbt
+    mnemonic: sugar narrow update three surround cupboard vital vapor fabric city father
+      toe tumble call element certain lava nose sponsor unaware code combine whale muscle
+  - name: bob
+    coins:
+      - 60000000bbt
+    mnemonic: mammal knife face mechanic short balance toe raven armor asset grass wing
+      crew quit arena purchase lawsuit scene style fork gauge they bottom mammal
+faucet:
+  name: admin
   coins:
-  - 20000token
-  - 200000000stake
-- name: bob
-  coins:
-  - 10000token
-  - 100000000stake
+    - 1000000bbt
 client:
+  typescript:
+    path: ts-client
+  composables:
+    path: vue/src/composables
   openapi:
     path: docs/static/openapi.yml
-faucet:
-  name: bob
-  coins:
-  - 5token
-  - 100000stake
+genesis:
+  app_state:
+    crisis:
+      constant_fee:
+        denom: bbt
+    gov:
+      deposit_params:
+        min_deposit:
+          - amount: "1000"
+            denom: bbt
+    mint:
+      params:
+        inflation_max: "0.000000000000000000"
+        inflation_min: "0.000000000000000000"
+        mint_denom: bbt
+    staking:
+      params:
+        bond_denom: bbt
+    swap:
+      params:
+        admin: bbt12ltvts09ga3gj32hsmnwq922ze0gmk4th0w9le
+        commissionRate: "0.050000000000000000"
 validators:
-- name: alice
-  bonded: 100000000stake
+  - name: admin
+    bonded: 1000000bbt
+    config:
+      moniker: "node0"
